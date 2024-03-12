@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href=".\assets\FAVICON.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Juegos de dados</title>
+  </head>
+  <body>
+    <header>
+      <img src="assets/varios/FAVICON.png" alt="logo" class="logo" />
+      <label for="checkbox" class="menu">
+        <img src="assets/varios/menu.png" alt="menu"
+      /></label>
+      <input id="checkbox" type="checkbox" />
+      <nav>
+        <ul class="nav-list">
+          <li><a href="#hero">Juegos de Mesa</a></li>
+          <li><a href="#novedades">Novedades</a></li>
+          <li><a href="#ofertas">Juegos en Ofertas</a></li>
+          <li><a href="#topventas">Top Ventas</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="#cuenta">Cuenta</a></li>
+          <form action="/buscar" method="GET">
+            <label for="busqueda">Buscar:</label>
+            <input
+              type="text"
+              id="busqueda"
+              name="buscar"
+              placeholder="Ingrese su búsqueda"
+              required/>
+            <button type="submit" ><span class="lens">&#128269</span></button> 
+         
+          </form>
+        </ul>
+      </nav>
+    </header>
+    <aside>
+      <section id="hero">
+        <div>
+          <h1>Juegos Divertidos <span>para toda la familia</span></h1>
+          <p>el mejor plan para tus <span>Findes</span></p>
+        </div>
+        <!-- <img
+          src="assets/varios/vista-superior-piezas-juego-mesa-meeple.jpg"
+          alt="juegosDivertidos"
+        />  -->
+        <button type="submit"><strong>Compralos Aquí</strong></button>
+<!--  <div class="imagen-hero">
+        <img  src="assets/varios/Juegos-de-mesa.jpg" alt="mejores-juegos"> -->
+      </div> 
+      </section>
+    </aside>
+    <main>
+      <div class="division">
+
+      <form action="#" method="get" name="selectores">
+     <section class="selector1">
+        <label for="category"> Categorias</label>
+        
+        <select id="category">
+          <option value="">Elige</option>
+          <option value="Familiares">Familiares</option>
+          <option value="Cooperativo">Cooperativo</option>
+          <option value="Solitario">Solitario</option>
+          <option value="Eurogame">Eurogame</option>
+          <option value="Infantil">Infantil</option>
+</select>
+<label for="category"> Clasificación</label>
+        <select id="category">
+          <option value="">Elige</option>
+          <option value="tablero">Juegos de tablero</option>
+          <option value="cartas">Juegos de cartas</option>
+          <option value="wargames">Wargames</option>
+          <option value="miniaturas">Juegos de miniaturas</option>
+          <option value="dados">Juego de dados</option>
+</select>
+<label for="theme"> Temática</label>
+        <select id="category">
+          <option value="">Elige</option>
+          <option value="Art">Arte y Literatura <span>(12)</span></option>
+          <option value="comic">cómics <span>(8)</span></option>
+          <option value="fantasy">Fantasía <span>(4)</span></option>
+          <option value="movie">Basada en Peliculas,series <span>(9)</span></option>
+          <option value="vikings">Vikingos <span>(7)</span></option>
+</select>
+<label for="price"> Precio</label>
+<input id="price" type="range" name="precio"
+min="4,00 €" max="1500,00 €">
+
+<label for="age"> Edad</label>
+        <select id="category">
+          <option value="">Elige</option>
+          <option value="">6-10 años</option>
+          <option value="">10-12 años</option>
+          <option value="">13-16 años</option>
+          <option value="">más 18</option>
+
+
+          </select>
+       </section>
+      </form>
+
+      
+      <div class="selector2">
+        <div>
+          <h2>Más vendidos</h2>
+          <a href="#">Ver más</a>
+        </div>
+      <section class="gallery">
+
+        <article class="card" >
+          <img src="assets/mas-vendidos/caja_three_wishes.jpg" alt="caja_three_wishes">
+          <div class="price">
+            <p>9,95 €</p>
+            <button> Añadir al carrito </button>
+          </div>
+          </article>
+          <article class="card" >
+          
+            <img src="assets/mas-vendidos/juego-pelusas_caja3d_rgb.jpg" alt="pelusas">
+            <div class="price">
+              <p>12,15 €</p>
+              <button>Añadir al carrito</button>
+            </div>
+            </article>
+            <article class="card"  >
+          
+              <img src="assets/mas-vendidos/juego-virus.jpg" alt="virus">
+              <div class="price">
+                <p>13,46 €</p>
+                <button>Añadir al carrito</button>
+              </div>
+              </article>
+              <article class="card"  >
+          
+                <img src="assets/mas-vendidos/misioncumplida_01.png" alt="mision_cumplida">
+                <div class="price">
+                  <p>9,95 €</p>
+                  <button>Añadir al carrito</button>
+                </div>
+                </article>
+                <article class="card" class="grid-container" >
+          
+                  <img src="assets/mas-vendidos/poker-de-billanos.jpg" alt="pokerdevillanos">
+                  <div class="price">
+                    <p>10,50 €</p>
+                    <button>Añadir al carrito</button>
+                  </div>
+                  </article>
+                  <article class="card"  >
+          
+                    <img src="assets/mas-vendidos/unanimo-box.jpg" alt="unanimo">
+                    <div class="price">
+                      <p>11,95 €</p>
+                      <button>Añadir al carrito</button>
+                    </div>
+                    </article>
+
+      </section>
+    </div>
+  </div>
+
+       
+      <section class="description"> 
+        <div>
+          <h2>¡Descubre la emoción de los juegos de mesa  en  <span>dAdOS!</span></h2>
+          <p>Encuentra títulos cautivadores que garantizan entretenimiento de calidad. ¡Haz que cada ocasión sea especial con nuestros juegos seleccionados con cuidado!</p>
+        </div> </section>
+     
+      <section class="gallery" class="second">
+        <div >
+        <h2>Novedades</h2>
+        <a href="#">Ver más</a>
+      </div>
+        <article class="card" >
+          
+          <img src="assets/novedades/juego-arnak-expedicion-perdida.jpg" alt="expedición">
+          <div class="price">
+            <p>31,50 €</p>
+            <button>Reservar</button>
+          </div>
+          </article>
+          <article class="card">
+          
+            <img src="assets/novedades/juego-dog-lover_resultado.jpg" alt="lover">
+            <div class="price">
+              <p>26,30 €</p>
+              <button>Reservar</button>
+            </div>
+            </article>
+            <article class="card"  >
+          
+              <img src="assets/novedades/juego-ft_federacion.jpg" alt="federación">
+              <div class="price">
+                <p>17,80 €</p>
+                <button>Reservar</button>
+              </div>
+              </article>
+              <article  class="card">
+          
+                <img src="assets/novedades/juego-ft_paper-dungeons-side-quest.jpg" alt="paper">
+                <div class="price">
+                  <p> 18 €</p>
+                  <button>Reservar</button>
+                </div>
+                </article>
+                <article class="card" >
+          
+                  <img src="assets/novedades/juego-paren-la-nave_3dbox_rgb.jpg" alt="nave">
+                  <div class="price">
+                    <p>23,40 €</p>
+                    <button>Reservar</button>
+                  </div>
+                  </article>
+                  <article class="card" >
+          
+                    <img src="assets/novedades/juego-tonto-pueblo-sale-fiesta.jpg" alt="fiesta">
+                    <div class="price">
+                      <p>8,60 €</p>
+                      <button>Reservar</button>
+                    </div>
+                    </article>
+
+      </section>
+      <section class="description"> 
+        <div>
+          <h2>¡Únete a nuestra comunidad <span>de Juegos!</span></h2>
+          <p >!Al hacerte socio, disfrutarás de beneficios exclusivos, acceso anticipado a nuevas llegadas y descuentos especiales. Sé parte de la emoción y comparte la pasión por los juegos de mesa con otros miembros de nuestra creciente familia. ¡Haz clic para unirte y elevar tu experiencia de juego!
+             </p>
+        </div> </section>
+
+
+
+      
+       <!-- SECCIÓN OFERTAS  -->
+      <section class="gallery">
+        <div>
+        <h2>Ofertas</h2>
+        <a href="#">Ver más</a>
+      </div>
+        <article class="card" >
+          
+          <img src="assets/ofertas/carpe_diem.jpg" alt="carpe_diem">
+          <div class="price">
+            <p>34,73 € <strike>41,35</strike></p>
+            <button>Añadir al carrito</button>
+          </div>
+          </article>
+          <article class="card"  >
+          
+            <img src="assets/ofertas/juego-black-stories-5.jpg" alt="juego-black-stories">
+            <div class="price">
+              <p>9,67 €
+                <strike>11,65 €</strike>
+      
+              </p>
+              <button>Añadir al carrito</button>
+            </div>
+            </article>
+            <article  class="card">
+          
+              <img src="assets/ofertas/juego-crimenes-verdaderos.jpg" alt="juego-crimenes-verdaderos">
+              <div class="price">
+                <p>10,37 € <strike>11,65 €</strike></p>
+                <button>Añadir al carrito</button>
+              </div>
+              </article>
+              <article  class="card" class="grid-container">
+          
+                <img src="assets/ofertas/juego-marvel-villainous.jpg" alt="juego-marvel-villainous">
+                <div class="price">
+                  <p> 38,47 € <strike>55,75 €</strike></p>
+                  <button>Añadir al carrito</button>
+                </div>
+                </article>
+                <article class="card" class="grid-container" >
+          
+                  <img src="assets/ofertas/mas_que_oca_zombi.jpg" alt="zombi">
+                  <div class="price">
+                    <p>23,40 € <strike>33,65 €</strike></p>
+                    <button>Añadir al carrito</button>
+                  </div>
+                  </article>
+                  <article class="card" class="grid-container">
+          
+                    <img src="assets/ofertas/runas.jpg" alt="runas">
+                    <div class="price">
+                      <p>18,60 € <strike>26,65 €</strike></p>
+                      <button>Añadir al carrito</button>
+                    </div>
+                    </article>
+
+      </section>
+    
+  </div>    <!-- 
+
+       FORMULARIO  -->
+      <section class="box-2">
+        <div class="description3">
+          <div>
+          <h3>Explora el mundo de los juegos de mesa en <span> familia </span></h3>
+    <p><span>Los juegos de mesa no son solo entretenimiento,</span> son la puerta de entrada a <span>momentos inolvidables en familia.</span> Al sumergirse en estos juegos, no solo te diviertes, sino que también <span>fortaleces los lazos familiares, fomentas la comunicación y despiertas la competitividad amistosa.</span> ¡Descubre la magia de compartir risas y desafíos en cada partida!</p>
+  </div>
+</div>
+
+      
+      <div class="formularios">
+        <h2>Bienvenido a nuestra Comunidad</h2>
+        <form action="#" method="post" name="contacto"></form>
+
+        <div class="send">
+          <label for="name">Nombre</label>
+          <input id="name" type="name" required />
+        </div>
+        <div class="send">
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="tucorreo@tudominio.com" />
+        </div>
+        <div class="send">
+          <label for="password">Contraseña</label>
+          <input id="password" type="password" required></input>
+        </div>
+        <div class="send">
+          <label for="check"
+            ><a href="#"><span>¿Aceptas los términos?</span></a></label
+          >
+          <input id="check" type="checkbox" required />
+        </div>
+        <div class="send">
+          <div>
+          <button type="submit">Registrarse</button>
+          <button type="submit">Iniciar sesión</button>
+        </div>
+        </div>
+       <!--  <div class="redes"> 
+          <img src="assets/redes-sociales/facebook.png" alt="facebook">
+          <img src="assets/redes-sociales/instagram.png" alt="instagram">
+          <img src="assets/redes-sociales/whatsapp (1).png" alt="whatsapp">
+          <img src="assets/redes-sociales/youtube.png" alt="youtube">
+        </div> -->
+      </div>
+
+    </section>
+   
+
+      
+    </main>
+    <footer>
+      <nav>
+     
+      <div class="condition">
+        <ul class="list-condition">
+          <li >Acerca de</li>
+        
+          <li><a href="#">Quiénes somos</a></li>
+          <li><a href="#">Gastos de envío</a></li>
+          <li><a href="#">Devoluciones</a></li>
+          <li><a href="#">Plan amigo</a></li>
+          <li><a href="#">Preguntas frecuentes</a></li>
+        </ul>
+
+          <ul class="list-condition">
+        
+        <li >Nuestras Tiendas</li>
+        
+        <li><a href="#">Barcelona</a></li>
+        <li><a href="#">Málaga</a></li>
+        <li><a href="#">Sevilla</a></li>
+        <li><a href="#">Zaragoza</a></li>
+        <li><a href="#">Madrid</a></li>
+      </ul>
+     
+      <ul class="list-condition">
+        <li >Descubre</li>
+      <li><a href="#">Mejores juegos de mesa</a></li>
+      <li><a href="#">Juegos más vendidos</a></li>
+      <li><a href="#">Outlet:juegos de mesa</a></li>
+      <li><a href="#">Nuevos juegos de mesa</a></li>
+      <li><a href="#">Tarjeta Regalo</a></li>
+    </ul>
+    <ul class="list-condition">
+   
+    <li >Juegos más buscados</li>
+    
+    <li><a href="#">Juegos de mesa familiares</a></li>
+    <li><a href="#">Juegos de mesa para 2</a></li>
+    <li><a href="#">Juegos de mesa infantiles</a></li>
+    <li><a href="#">Juegos de cartas</a></li>
+    <li><a href="#">Próximos lanzamientos</a></li>
+  </ul>
+</div>
+        
+        <div class="derechos">
+<p>
+          Derechos de autor © 2023 DADOS.
+          Todos los derechos
+          reservados.
+        </p>
+      </div>
+      
+    </nav>
+    </footer>  
+  </body>
+</html>

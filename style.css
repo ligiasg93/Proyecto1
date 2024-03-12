@@ -1,0 +1,802 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@300&family=Sometype+Mono&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/*variables*/
+
+:root{
+  /*colors*/
+  --game-color-000:#9E2D0B;
+  --game-color-001:#D99416;
+  --game-color-002:#f0efeb;
+  --game-color-003:#BC4B51;
+  --game-color-004:#5B8E7D;
+  --game-color-005:#efe095;
+  --game-color-006:#F4A259;
+  --game-color-007:#8CB369;
+  --game-color-008:#081c15;
+  --game-color-009:#fefee3;
+  --game-color-010:#1f2421;
+
+
+
+  /*background*/
+  --game-body-background:var(--game-color-002);
+  --game-card-background:var(--game-color-009);
+  --game-hero-background:var(--game-color-000)
+  --game-section-background:var(--game-color-005);
+  --game-button-background:var(--game-color-007);
+  --game-button-invert-background:var( --game-color-004);
+  --game-button-highlight-background:var(--button-background);
+  /*special background*/
+  --game-offer-background:var( --game-color-001);
+  --game-new-background:var(--game-color-003);
+  /*text color*/
+  --game-text-color-primary:var(--game-color-001);
+  --game-text-color-secondary:var(  --game-color-000);
+  --game-text-color-tertiary:var( --game-color-002);
+  /*spacing*/
+  --game-margin-xs:10px;
+  --game-margin-s:20px;
+  --game-margin-m:30px;
+  --game-margin-l:40px;
+  --game-margin-xl:50px;
+  --game-margin-xxl:60px;
+
+  --game-padding-xs:10px;
+  --game-padding-s:20px;
+  --game-padding-m:30px;
+  --game-padding-l:40px;
+  --game-padding-xl:50px;
+  --game-padding-xxl:60px;
+
+  --game-gap-xs:10px;
+  --game-gap-s:20px;
+  --game-gap-m:30px;
+  --game-gap-l:40px;
+  --game-gap-xl:50px;
+  --game-gap-xxl:60px;
+
+  /*border radius*/
+  --game-border-radius:10px;
+  --game-border-radius-circle:100%;
+}
+
+ ul{
+  list-style-type: none;
+ }
+ a{
+  text-decoration: none;
+  color: var(--game-color-000);
+  font-size: 20px;
+  text-decoration: double;
+
+ }
+
+
+ header{
+   position:fixed; 
+  display: flex;
+  background-color: var(--game-color-002);
+  opacity: 0.9;
+  width: 100%;
+   height: auto; 
+       padding-bottom: var(--game-padding-s);   
+       padding-top: var(--game-padding-s);
+  align-items: center;
+  justify-content: space-between; 
+  gap:var(--game-margin-s);  
+   z-index: 3;
+
+ }
+ header>img{
+  padding-left: var(--game-padding-xs);
+  width: 100%;
+  max-width:150px;
+   object-fit: cover; 
+  border-radius: var(--game-border-radius);
+
+ }
+ header>nav{
+  flex-grow:1;
+ background-color: var(--game-color-005);
+  display: flex;
+  justify-content: center;
+  
+ }
+
+.nav-list{
+  display: flex;
+  justify-content:space-around;
+  background-color: var(--game-text-color-tertiary);
+  width: 100%;
+  gap:30px;
+  text-align: center;
+
+}
+.nav-list :hover{
+  transform: scale(1.03);
+  color:var(--game-color-001);
+  
+  
+}
+.lens{
+  cursor: pointer;
+}
+.menu{
+  display:none;
+  width: 40px;
+  height: 50px;
+  cursor: pointer;
+  position:relative;
+  z-index:2;
+}
+.menu >img{
+  width: 100%;
+  padding: var(--game-padding-xs);
+}
+#checkbox{
+  display:none; 
+
+}
+#checkbox:checked ~ nav{
+  width: 50%;
+}
+
+@media(max-width:1000px){
+
+  .nav-list>form{
+    display:none;
+    transition: all 0.5s;
+    z-index: 2;
+  }
+}
+
+@media(max-width:750px){
+  header > nav{
+    position:absolute; 
+    top:0;
+    height: 100svh;
+    right: 0;
+    width: 0%;
+     padding-top:var(--game-padding-s);    
+    overflow: hidden;
+    background-color: var(--game-color-002
+    );
+    transition: all 0.5s;
+    
+
+  }
+  .nav-list{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: var(--game-color-009);
+  }
+ 
+ 
+  .menu{
+    display: block;
+    
+    
+  }
+  header{
+  
+   opacity: 1;
+   width: 100%;
+    height: 100px; 
+   
+ 
+  }
+  header>img{
+  
+   width: 100%;
+   max-width:80px;
+    
+ 
+  }
+}
+@media(min-width:750px){
+  #checkbox:checked~nav{
+    width: auto;
+  }
+}
+@media(max-width:500px){
+  #checkbox:checked~nav{
+    width: 100%;
+    background-color: var(--game-color-004);
+  }
+  }
+/*HERO*/
+ aside{
+    position:relative;   
+    top:50px;  
+   /*   padding:var(--game-padding-s);  no poner  */
+  
+  display:flex;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 150svh;
+  width: 100%;
+  background-image: url(assets/varios/Juegos-de-mesa.jpg);
+  background-position:center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; 
+  
+  
+}
+#hero{
+
+  width: 100%;
+  height:100svh;  
+  min-width: 250px;  
+  display: flex;
+  flex-wrap:wrap;
+  align-content: center;
+  justify-content: space-between;
+  gap: var(--game-gap-s);
+  align-items: center;
+   padding-bottom: 200px;   
+   z-index: 2; 
+  /*  position:absolute;   */   
+}
+
+#hero >div{
+ height: fit-content;
+  font-size: xx-large;
+  gap: var(--game-gap-s);
+  background-color: var(--game-color-002);
+  opacity: 0.9;
+  border-radius: var(--game-border-radius);
+    width: 80%;
+
+  
+}
+#hero >div>h1 {
+   padding: var(--game-padding-s); 
+
+  
+}
+#hero >div>h1> span {
+
+  font-style:italic;
+  color: var(--game-color-001);
+}
+#hero >div>p> span {
+  font-size: xxx-large;
+font-style:italic;
+  color: var(--game-text-color-secondary);
+}
+#hero >div>p{
+  position:relative;
+  margin-left:var(--game-margin-xxl);
+  width: 100%;
+  font-size: x-large;
+}
+
+#hero>button{
+ padding:var(--game-padding-s);
+  margin-right: var(--game-margin-m);
+  width: 15%;
+  min-width: 200px;
+  max-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  cursor:pointer;
+  background-color: rgba(244, 244, 143, 0.845);
+  
+  border-radius: var(--game-border-radius);
+  font-size: larger;
+  font-style: oblique;
+  color:var(--game-color-008);
+ 
+}
+#hero>button:hover{
+  color: var(--game-color-000);
+  transform: scale(1.1);
+}
+@media(max-width: 1166px){
+
+  #hero>div{
+    background-color: var(--game-color-002);
+    opacity: 0.7;
+    width: 100%;
+     /*   padding: var(--game-padding-l);   */
+    flex-wrap: wrap;
+    display: flex;
+   
+    
+  z-index: 1; 
+  }
+  #hero>button{
+    position:relative;
+    left:20%;
+    display:flex;
+    justify-content: center;
+   
+  }
+  main{
+    margin-top:200px;
+    
+  }  
+}
+.division{
+  
+ 
+  display:flex;
+  justify-content: space-between;
+  align-content: end;
+background-color: white;   
+  opacity: 0.9; 
+   padding-top:var(--game-padding-m);    
+  width: 100%;
+  z-index: 4;
+}
+.selector1{
+  display: flex;
+  flex:1;
+  flex-direction: column; 
+  align-content: end;
+  justify-content: center;
+  width: 100%;
+  height: 80%;
+  gap: var(--game-gap-s);
+  border-right: dashed 1px var(--game-color-003);
+    padding-right: 20px;    
+   
+
+}
+.selector1>label{
+  font-size: x-large;
+  text-decoration: underline;
+  color: var(--game-text-color-primary);
+}
+#category{
+border-radius: var(--game-border-radius);
+height: 50px;
+border:transparent;
+box-shadow:0px 6px -23px -15px var(--game-color-001) ;
+text-align: center;
+color: var(--game-text-color-secondary);
+}
+.selector2{
+  display: flex;
+  flex:2;
+  flex-wrap:wrap;
+  width: 100%;
+   position: relative;  
+  flex-grow: 1;
+  
+}
+.selector2>div{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  height: 50px;
+  
+  flex-wrap:wrap;
+}
+.selector2>div>h2{
+  font-size:xx-large;
+  text-decoration: underline;
+  color:var(--game-color-008);
+  background-color: white;
+  border: transparent;
+  box-shadow: 0px 0px 10px -15px var(--game-color-001);
+  opacity: 0,8; 
+}
+
+
+.gallery{
+  display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: var(--game-gap-s);
+     padding: var(--game-padding-xs);  
+     position:relative;   
+    
+}
+.card>img{
+  width: 100%;
+ max-width: 200px;
+  box-shadow: 0px 10px 23px -10px var(--game-color-000);
+  filter: brightness(1.1);
+  
+
+}
+.price{
+  display: flex;
+  justify-content: center;
+  gap: var(--game-gap-xs);
+  flex-direction: column;
+  align-content: center;
+  flex-wrap:wrap;
+   padding: var(--game-padding-xs); 
+  color: var(--game-text-color-secondary);
+  font-size: large;
+
+
+}
+.price>p{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.price > button {
+  background-color: var(--game-color-004);
+  border-radius: var(--game-border-radius);
+  height: 40px;
+  padding: var(--game-padding-xs);
+  color: var(--game-color-002); 
+  cursor:pointer; 
+  
+}
+.price > button:hover {
+  transform: scale(1.1);
+  
+}
+ /*medias para responsive */
+@media(max-width:1137px){
+  .selector2{
+      flex-direction: column;  
+    justify-content: center;
+    align-content: center;
+   
+  }
+  .selector2>div{
+    display: flex;
+    width: 100%;
+    justify-content: space-around; 
+    align-content: center;
+    
+  }
+  
+.selector1{
+  top: 100px;
+      position: relative;  
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+    justify-content: flex-start ;
+    width: 100%;
+    height: 80%;
+     gap: var(--game-gap-s); 
+}
+}
+
+  @media(max-width:797px){
+  
+      .selector1{
+        display:none;
+        transition: 0.2s;
+      }
+    }
+  
+.description{
+  background-color: var(--game-color-002);
+  border: dashed 1px var(--game-color-007);
+  border-radius: var(--game-border-radius);
+  padding: var(--game-padding-s); 
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: justify;
+   gap: var(--game-gap-m); 
+}
+.description>div{
+  display: flex;
+   flex-direction: column; 
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.description>div>h2{
+  text-align: center;
+  flex-direction: column;
+  width: 50%;
+  padding: var(--game-padding-s);
+
+  
+}
+ .description>div>h2>span{
+  color: var(--game-text-color-primary);
+  font-style: italic;
+  text-align: justify;
+
+} 
+.description>div>p{
+
+  font-size: larger;
+  width: 70%;
+  position: relative;
+  text-align: justify;
+  letter-spacing: 2px;
+}
+
+
+
+
+.gallery>div{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+      padding: var(--game-padding-m);  
+}
+.gallery>div>h2{
+  font-size: xx-large;
+  text-decoration: underline;
+  color:var(--game-color-008);
+  
+
+}
+
+.box-2{
+  width: 100%;
+  display:flex;
+  flex:1;
+  flex-wrap: wrap;
+  
+ 
+  
+}
+.description3{
+   display:flex;
+  flex:3;
+  
+  width: 100%;
+  height: 400px;
+  border: transparent;
+  border-radius: 5px;
+  box-shadow: 0,0,23px -15px var(--game-color-001);
+  background-color: var(--game-color-000);
+   background-image:url(assets/varios/familia.jpg);
+  background-position:right;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-attachment: fixed;  
+
+}
+.description3 >div {
+  display: flex;
+       flex-direction: column;  
+    justify-content: center;
+    align-items:center;
+    flex-wrap: wrap; 
+    align-content: flex-end;
+}
+ .description3 >div> h3 {
+  display:flex;
+   flex-wrap: wrap; 
+  
+  text-align: right; 
+  text-align: justify;
+    width: 50%;
+    padding: var(--game-padding-s);
+    color: var(--game-color-001);
+    font-size: large;
+    background-color: #f0efeb;
+    opacity: 0.9;
+    border-radius: 5px;
+    letter-spacing: 0,5px;
+    
+
+} 
+.description3 div > p {
+  display:flex;
+   flex-wrap: wrap; 
+  text-align: right;
+  text-align: justify;
+    width: 100%;
+    padding: var(--game-padding-xs); 
+    color: var(--game-color-001);
+    font-size: large;
+    background-color: #f0efeb;
+    opacity: 0.9;
+    border-radius: 5px;
+    letter-spacing: 0,5px;
+    
+
+} 
+
+.description3  div> h3 > span {
+  color: var(--game-color-004);
+  font-size: larger;
+  font-style: oblique;
+  letter-spacing: 3px;
+   
+
+
+}
+.description3  div> p > span {
+  color: var(--game-color-004);
+  font-size:large;
+  font-style: oblique;
+  text-align: end; 
+    max-height: auto; 
+
+} 
+
+ 
+     .formularios{
+      flex:2;
+     border: dashed 1px var(--game-color-007);
+      width: 100%;
+      height: 400px;
+     
+  
+       background-image:url(./assets/varios/peones-ajedrez-colores.jpg
+      );
+     background-position: center;
+      background-repeat: no-repeat;
+      background-attachment:fixed;
+      background-size:cover;
+      transition: 0.5s; 
+    
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: center;
+       flex-direction: column; 
+     
+      border-radius: 10px;
+      gap: 10px;
+    }
+  .formularios::before{
+      position:absolute;
+      content:"";
+       top:0;
+      left:0;
+      right: 0; 
+      bottom:0;
+      background-color: (0,0,0, .55); 
+    }  
+     @media(max-width:918px){
+      .box-2{
+        flex-direction:column;
+      }
+
+      .formularios, .description3{
+        flex:auto;
+        transition: 0.2s;
+      }
+      .formularios{
+        margin-top: var(--game-margin-xs);
+        
+      }
+    }
+    @media(max-width:467px){
+      .description3  div> p{
+         padding: var(--game-padding-xs); 
+        font-size: large;
+        transition: 0,5;
+      }
+    }  
+    .formularios h2{
+      display: flex;
+      width: 100%;
+      
+      justify-content: center;
+      
+      
+      color: var(--game-text-color-primary
+      );
+      text-align: center;
+
+      
+    }
+    .send{
+      display: flex;
+      flex-wrap:wrap;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      align-content: center;
+    }
+    .send >label{
+
+      color: var(--game-color-008);
+      font-size: 20px;
+
+    }
+    .send >input{
+      width: 40%;
+      display: flex; 
+      gap:var(--game-gap-xs);
+      height: 25px;   
+    }
+    .send >div{
+      width: 100%;
+     justify-content: center;
+      display: flex;
+      flex-direction: row;
+      text-align: center;
+      height: 30px;
+      gap: 10px;
+      height: 40px;
+      gap: 10px;
+       margin: 20px; 
+  }
+  .send >div>button{
+    background-color: var(--game-color-004);
+    border:transparent;
+    width: 100px;
+    border-radius: var(--game-border-radius);
+   opacity: 0.9;
+   color: var(--game-color-000);
+   font-size: 15px;
+   cursor: pointer;
+    
+    }
+    .send >div>button:hover{
+      transform: scale(1.1);
+
+    }
+    .redes{
+      width: 100%;
+      display:flex;
+      justify-content: center;
+      gap: var(--game-gap-xs);
+
+
+    }
+    .redes>img{
+      display: flex;
+      width: 30px;
+      
+      
+    }
+    footer {
+      position: absolute;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      padding: 50px;
+      display: flex;
+      height: auto;
+      background-color: var(--game-color-002);
+      flex-wrap: wrap;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .condition{
+     display: flex;
+     justify-content: space-between;
+     align-content: end;
+     width: 100%;
+     gap: var(--game-gap-s);
+     flex-wrap: wrap; 
+    
+    }
+    .list-condition{
+      display:flex;
+      flex-direction: column;
+      text-align: justify;
+
+     
+      
+    }
+    li :first-child:hover  {
+      color: var(--game-color-007);
+    }
+    .derechos{
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+       flex-direction: column; 
+      justify-content: center;
+      align-content: center;
+      height: 150px;
+    }
+     
